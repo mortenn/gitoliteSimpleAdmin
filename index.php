@@ -9,7 +9,8 @@
 	chdir($keys);
 	$users = glob('*.pub');
 	foreach($users as $i => $user)
-		$users[$i] = preg_replace('/\.pub$/','',$user);
+		$users[$i] = preg_replace('/(|@[^.]*)\.pub$/','',$user);
+	$users = array_unique($users);
 
 	$configuration = file($config);
 	

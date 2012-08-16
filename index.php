@@ -3,6 +3,9 @@
 	$config = $admin.'/conf/gitolite.conf';
 	$keys = $admin.'/keydir';
 
+	chdir($admin);
+	exec('git pull');
+
 	chdir($keys);
 	$users = glob('*.pub');
 	foreach($users as $i => $user)

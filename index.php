@@ -11,7 +11,6 @@
 	foreach($users as $i => $user)
 		$users[$i] = preg_replace('/\.pub$/','',$user);
 
-	chdir($config);
 	$configuration = file($config);
 	
 	define('NONE', 0);

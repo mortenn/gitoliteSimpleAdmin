@@ -27,6 +27,6 @@ Create the folder where you want to keep the admin repository, I opted for /var/
 `mdkir /var/www/data && chown apache.apache /var/www/data`
 
 Clone the gitolite-admin repository as apache;
-`su -s /bin/sh -c "cd /var/www/data && git clone gitolite@git-server:gitolite-admin"`
+`su -s /bin/sh -c "cd /var/www/data && git clone gitolite@git-server:gitolite-admin" apache`
 
 Edit index.php and make sure `$admin` points to the correct path.

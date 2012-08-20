@@ -4,7 +4,7 @@ This is a minimalistic PHP driven web interface for gitolite-admin.
 
 Status
 ======
-While the project is currently not ready for use, but that will hopefully change rapidly.
+This tool should now be good to go, but the codebase needs some cleanup. Fortunately, there isn't much of it.
 
 Design principals
 =================
@@ -15,7 +15,6 @@ Design principals
 
 Installing
 ==========
-**This information is subject to change dramatically**
 **These instructions were written with CentOS 6 in mind.**
 
 As root, run the command `su -s /bin/sh -c "ssh-keygen" apache`

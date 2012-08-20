@@ -4,7 +4,12 @@ This is a minimalistic PHP driven web interface for gitolite-admin.
 
 Status
 ======
-This tool should now be good to go, but the codebase needs some cleanup. Fortunately, there isn't much of it.
+This is fairly complete, but it is lacking support for some permissions.
+While the gitolite permissions are defined as the regex -|R|RW+?C?D?M? this currently support C|[RW+]+
+Obviously, this means it is currently possible to specify invalid permission sets.
+Until this can be improved upon, users of this tool need to be a bit careful.
+
+If you want more advanced permissions than this tool currently supports, you may be better off editing the config manually.
 
 Design principals
 =================

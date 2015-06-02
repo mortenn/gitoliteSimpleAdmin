@@ -24,7 +24,10 @@ Installing
 
 As root, run the command `mkdir ~apache/.ssh && chmod 700 ~apache/.ssh && chown apache.apache ~apache/.ssh && su -s /bin/sh -c "ssh-keygen" apache`
 
-Add apaches fresh public key to gitolite and grant it access to the gitolite-admin repository.
+If you already have a gitolite set up, add apaches fresh public key to gitolite and grant it access to the gitolite-admin repository.
+
+If this is a fresh install, run this command to set up gitolite and give apache access:
+`gitolite setup -a apache -pk ~apache/.ssh/id_rsa.pub`
 
 Make sure apaches .ssh folder and the files within it are only readable to apache.
 You can do this by running the command `chown -R apache.apache ~apache/.ssh && chmod g=,o= ~apache/.ssh{,/*}`

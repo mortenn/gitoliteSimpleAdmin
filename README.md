@@ -22,7 +22,7 @@ Installing
 ==========
 **These instructions were written with CentOS 6 in mind.**
 
-As root, run the command `su -s /bin/sh -c "ssh-keygen" apache`
+As root, run the command `mkdir ~apache/.ssh && chmod 700 ~apache/.ssh && chown apache.apache ~apache/.ssh && su -s /bin/sh -c "ssh-keygen" apache`
 
 Add apaches fresh public key to gitolite and grant it access to the gitolite-admin repository.
 

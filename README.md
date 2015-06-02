@@ -35,6 +35,9 @@ You can do this by running the command `chown -R apache.apache ~apache/.ssh && c
 Create the folder where you want to keep the admin repository, I opted for /var/www/data:
 `mdkir /var/www/data && chown apache.apache /var/www/data`
 
+Before you can clone the repository, apache needs to trust the host, so run the command:
+`su -s /bin/sh apache` to open a shell as apache, then `ssh git-server` and accept the host key. Then hit ctrl+d to return to your root shell and continue.
+
 Clone the gitolite-admin repository as apache;
 `su -s /bin/sh -c "cd /var/www/data && git clone gitolite@git-server:gitolite-admin" apache`
 

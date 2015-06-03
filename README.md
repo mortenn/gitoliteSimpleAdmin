@@ -42,3 +42,17 @@ Clone the gitolite-admin repository as apache;
 `su -s /bin/sh -c "cd /var/www/data && git clone gitolite@git-server:gitolite-admin" apache`
 
 Edit index.php and make sure `$admin` points to the correct path.
+
+Now navigate to the admin site, and create groups as you see fit.
+
+Important information
+=====================
+Before you click the push button, make sure you have granted access to gitolite-admin for the key you added for apache, or you will lock yourself out of the system.
+
+Usage
+=====
+This tool enforces a group-based control of access. Repositories and users are assigned to groups and then you assign permissions to user groups to a group of repositories.
+
+When you make a change, always hit Save.
+
+When you have made all your changes and saved, you can hit Push to activate the changes on the server.
